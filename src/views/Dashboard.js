@@ -55,5 +55,4 @@ const Dashboard = () => {
   );
 };
 
-// export default withRouter(Dashboard);
 export default Dashboard;

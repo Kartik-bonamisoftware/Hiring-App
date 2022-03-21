@@ -7,7 +7,6 @@ import Root from "./Root";
 const App = () => {
   return (
     <div className="container center">
-      <Header />
       <Root />
     </div>
   );

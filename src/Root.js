@@ -7,9 +7,9 @@ import Registration from "./views/Registration";
 
 const Root = () => {
   const [isAuth, setIsAuth] = useState(false);
-  const isLoggedIn = () => {
-    setIsAuth(!isAuth);
-  };
+  // const isLoggedIn = () => {
+  //   setIsAuth(!isAuth);
+  // };
   return (
     <BrowserRouter>
       <Routes>
@@ -23,7 +23,6 @@ const Root = () => {
             </ProtectedRoute>
           }
         />
-        {/* <Route exact path="/header" element={<Header />} /> */}
       </Routes>
     </BrowserRouter>
   );

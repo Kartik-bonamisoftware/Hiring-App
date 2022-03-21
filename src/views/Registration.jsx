@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 const Registration = () => {
   const initialValues = {
     firstName: "",
-    // lastName: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -20,7 +19,6 @@ const Registration = () => {
       initialValues={initialValues}
       validationSchema={registrationSchema}
       onSubmit={(values) => {
-        // debugger;
         axios
           .post("http://localhost:3000/posts", values)
           .then((response) => {
@@ -28,19 +26,14 @@ const Registration = () => {
           })
           .catch((error) => console.log("Error Msg 1111111", error));
         navigate("/dash");
+        console.log(values);
       }}
     >
-      {({ ...rest }) => (
+      {() => (
         <div>
           <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
           <Form>
-            <TextField
-              label="First Name"
-              name="firstName"
-              type="text"
-              {...rest}
-            />
-            {/* <TextField label="last Name" name="lastName" type="text" /> */}
+            <TextField label="Name" name="firstName" type="text" />
             <TextField label="Email" name="email" type="email" />
             <TextField label="Password" name="password" type="password" />
             <TextField

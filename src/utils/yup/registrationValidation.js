@@ -7,11 +7,6 @@ const registrationSchema = Yup.object().shape({
     .min(3, "Too Short!")
     .max(20, "Too Long!")
     .required("Required"),
-  // lastName: Yup.string()
-  //   .matches(nameRegExp, "Please Enter Valid Name")
-  //   .min(3, "Too Short!")
-  //   .max(20, "Too Long!")
-  //   .required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
   password: Yup.string()
     // .matches(
